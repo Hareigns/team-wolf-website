@@ -4,7 +4,12 @@ import ServiceOthersCard from '/src/components/Card';
 
 const Services = () => {
 
-  {/* PACKS DE SERVICIOS */}
+  {/* PACKS DE SERVICIOS */ }
+
+  const expressPack = [
+    { text: '✔ Diseño express', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' }
+  ];
 
   const basicPack = [
     { text: '✔ Diseño básico', icon: 'bi bi-palette' },
@@ -27,7 +32,7 @@ const Services = () => {
     { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
   ];
 
-  {/* OTROS SERVICIOS */}
+  {/* OTROS SERVICIOS */ }
 
   const Service1 = [
     { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
@@ -91,6 +96,15 @@ const Services = () => {
           <h1 className="text-center mb-4">Nuestros servicios</h1>
           <h2 className="text-center text-muted text-center mb-4">Paquetes disponibles</h2>
           <div className="d-flex flex-wrap justify-content-center gap-4">
+
+            <ServicePacksCard
+              title="C$"
+              description="Express"
+              listItems={expressPack}
+              buttonText="Solicitar completo"
+              buttonVariant="primary"
+              onButtonClick={() => handleContact('completo')}
+            />
             <ServicePacksCard
               title="C$"
               description="Basico"
@@ -114,6 +128,7 @@ const Services = () => {
               buttonVariant="primary"
               onButtonClick={() => handleContact('completo')}
             />
+
           </div>
         </div>
       </div>
@@ -168,7 +183,7 @@ const Services = () => {
               buttonText="Solicitar"
               buttonVariant="primary"
               onButtonClick={() => handleContact('completo')}
-            />    
+            />
           </div>
         </div>
       </div>

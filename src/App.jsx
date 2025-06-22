@@ -9,13 +9,13 @@ function App() {
   return (
     <div className='main-main'>
 
-      <div className="mb-3">
+      
         <Home />
-      </div>
+      
 
-      <div className="mb-3">
+      
         <Services />
-      </div>
+      
 
 
 

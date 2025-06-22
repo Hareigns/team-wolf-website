@@ -1,20 +1,75 @@
-import ServicesCard from '/src/components/Card';
+import ServicePacksCard from '/src/components/Card';
+import ServiceOthersCard from '/src/components/Card';
+
 
 const Services = () => {
-  const basicFeatures = [
+
+  {/* PACKS DE SERVICIOS */}
+
+  const basicPack = [
     { text: '✔ Diseño básico', icon: 'bi bi-palette' },
     { text: '✔ Soporte por email', icon: 'bi bi-envelope' },
     { text: '✔ Soporte por email', icon: 'bi bi-envelope' }
   ];
 
-  const premiumFeatures = [
+  const premiumPack = [
     { text: '✔ Diseños personalizados', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte 24/7', icon: 'bi bi-headset text-primary' },
     { text: '✔ Dominio personalizado', icon: 'bi bi-globe' },
     { text: '✔ SEO básico', icon: 'bi bi-search' }
   ];
 
-  const completeFeatures = [
+  const completePack = [
+    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
+    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
+    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
+    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+  ];
+
+  {/* OTROS SERVICIOS */}
+
+  const Service1 = [
+    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
+    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
+    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
+    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+  ];
+
+  const Service2 = [
+    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
+    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
+    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
+    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+  ];
+
+  const Service3 = [
+    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
+    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
+    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
+    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+  ];
+
+  const Service4 = [
+    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
+    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
+    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
+    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+  ];
+
+  const Service5 = [
+    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
+    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
+    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
+    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+  ];
+
+  const Service6 = [
     { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
     { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
@@ -28,32 +83,94 @@ const Services = () => {
   };
 
   return (
-    <div className="container py-5">
-      <h2 className="text-center mb-4">Nuestros Servicios</h2>
-      <div className="d-flex flex-wrap justify-content-center gap-4">
-        <ServicesCard
-          title="Paquete Básico"
-          description="Perfecto para startups"
-          listItems={basicFeatures}
-          buttonText="Contratar básico"
-          buttonVariant="primary"
-          onButtonClick={() => handleContact('básico')}
-        />
-        <ServicesCard
-          title="Paquete Premium"
-          description="Solución completa para empresas"
-          listItems={premiumFeatures}
-          buttonText="Contratar premium"
-          onButtonClick={() => handleContact('premium')}
-        />
-        <ServicesCard
-          title="Paquete Completo"
-          description="Todo incluido + soporte prioritario"
-          listItems={completeFeatures}
-          buttonText="Contratar completo"
-          buttonVariant="primary"
-          onButtonClick={() => handleContact('completo')}
-        />
+
+    <div className='services-main-container'>
+
+      <div className='servicePacks-main-container'>
+        <div className="container py-5">
+          <h1 className="text-center mb-4">Nuestros servicios</h1>
+          <h2 className="text-center text-muted text-center mb-4">Paquetes disponibles</h2>
+          <div className="d-flex flex-wrap justify-content-center gap-4">
+            <ServicePacksCard
+              title="C$"
+              description="Basico"
+              listItems={basicPack}
+              buttonText="Solicitar básico"
+              buttonVariant="primary"
+              onButtonClick={() => handleContact('básico')}
+            />
+            <ServicePacksCard
+              title="C$"
+              description="Estandar"
+              listItems={premiumPack}
+              buttonText="Solicitar estandar"
+              onButtonClick={() => handleContact('premium')}
+            />
+            <ServicePacksCard
+              title="C$"
+              description="Completo"
+              listItems={completePack}
+              buttonText="Solicitar completo"
+              buttonVariant="primary"
+              onButtonClick={() => handleContact('completo')}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className='serviceOthers-main-container'>
+        <div className="container py-5">
+          <h2 className="text-muted text-center mb-4">Otros servicios</h2>
+          <div className="d-flex flex-wrap justify-content-center gap-4">
+            <ServiceOthersCard
+              title="C$"
+              description="Tarjetas de presentacion"
+              listItems={Service1}
+              buttonText="Solicitar"
+              buttonVariant="primary"
+              onButtonClick={() => handleContact('básico')}
+            />
+            <ServiceOthersCard
+              title="C$"
+              description="Tarjetas de cumpleanos/eventos"
+              listItems={Service2}
+              buttonText="Solicitar"
+              onButtonClick={() => handleContact('premium')}
+            />
+            <ServiceOthersCard
+              title="C$"
+              description="Banners publicitarios"
+              listItems={Service3}
+              buttonText="Solicitar"
+              buttonVariant="primary"
+              onButtonClick={() => handleContact('completo')}
+            />
+            <ServiceOthersCard
+              title="C$"
+              description="Posters"
+              listItems={Service4}
+              buttonText="Solicitar"
+              buttonVariant="primary"
+              onButtonClick={() => handleContact('completo')}
+            />
+            <ServiceOthersCard
+              title="C$"
+              description="Catalogos digitales"
+              listItems={Service5}
+              buttonText="Solicitar"
+              buttonVariant="primary"
+              onButtonClick={() => handleContact('completo')}
+            />
+            <ServiceOthersCard
+              title="C$"
+              description="Disenos de menus"
+              listItems={Service1}
+              buttonText="Solicitar"
+              buttonVariant="primary"
+              onButtonClick={() => handleContact('completo')}
+            />    
+          </div>
+        </div>
       </div>
     </div>
   );

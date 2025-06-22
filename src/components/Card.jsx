@@ -3,7 +3,7 @@ import CustomList from '/src/components/List';
 import Button from 'react-bootstrap/Button';
 import PropTypes from 'prop-types';
 
-const ServicesCard = ({
+const Cards = ({
   title,
   description,
   listItems,
@@ -14,8 +14,9 @@ const ServicesCard = ({
   return (
     <Card style={{ width: '18rem' }} className="shadow-sm h-100">
       <Card.Body className="d-flex flex-column">
-        <Card.Title className="text-center">{title}</Card.Title>
-        <Card.Text className="text-muted text-center mb-3">{description}</Card.Text>
+        <Card.Text className="text-center mb-3">{description}</Card.Text>
+        <Card.Title className="text-center mb-3">{title}</Card.Title>
+
         <CustomList items={listItems} className="mb-3" />
 
         <div className="p-3 text-center">
@@ -39,7 +40,7 @@ const ServicesCard = ({
   );
 };
 
-ServicesCard.propTypes = {
+Cards.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   listItems: PropTypes.array.isRequired,
@@ -48,4 +49,4 @@ ServicesCard.propTypes = {
   onButtonClick: PropTypes.func
 };
 
-export default ServicesCard;
+export default Cards;

@@ -6,8 +6,8 @@ const Services = () => {
 
   {/* PACKS DE SERVICIOS */ }
 
-  const expressPack = [
-    { text: '✔ Diseño express', icon: 'bi bi-star-fill text-warning' },
+  const fastPack = [
+    { text: '✔ Diseño rapido', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' }
   ];
 
@@ -17,7 +17,7 @@ const Services = () => {
     { text: '✔ Soporte por email', icon: 'bi bi-envelope' }
   ];
 
-  const premiumPack = [
+  const standarPack = [
     { text: '✔ Diseños personalizados', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte 24/7', icon: 'bi bi-headset text-primary' },
     { text: '✔ Dominio personalizado', icon: 'bi bi-globe' },
@@ -25,7 +25,7 @@ const Services = () => {
   ];
 
   const completePack = [
-    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
     { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
     { text: '✔ SEO avanzado', icon: 'bi bi-search' },
@@ -35,7 +35,7 @@ const Services = () => {
   {/* OTROS SERVICIOS */ }
 
   const Service1 = [
-    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
     { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
     { text: '✔ SEO avanzado', icon: 'bi bi-search' },
@@ -43,7 +43,7 @@ const Services = () => {
   ];
 
   const Service2 = [
-    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
     { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
     { text: '✔ SEO avanzado', icon: 'bi bi-search' },
@@ -51,7 +51,7 @@ const Services = () => {
   ];
 
   const Service3 = [
-    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
     { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
     { text: '✔ SEO avanzado', icon: 'bi bi-search' },
@@ -59,7 +59,7 @@ const Services = () => {
   ];
 
   const Service4 = [
-    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
     { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
     { text: '✔ SEO avanzado', icon: 'bi bi-search' },
@@ -67,7 +67,7 @@ const Services = () => {
   ];
 
   const Service5 = [
-    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
     { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
     { text: '✔ SEO avanzado', icon: 'bi bi-search' },
@@ -75,7 +75,7 @@ const Services = () => {
   ];
 
   const Service6 = [
-    { text: '✔ Diseño premium', icon: 'bi bi-star-fill text-warning' },
+    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
     { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
     { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
     { text: '✔ SEO avanzado', icon: 'bi bi-search' },
@@ -99,8 +99,8 @@ const Services = () => {
 
             <ServicePacksCard
               title="C$"
-              description="Express"
-              listItems={expressPack}
+              description="Rapido"
+              listItems={fastPack}
               buttonText="Solicitar completo"
               buttonVariant="primary"
               onButtonClick={() => handleContact('completo')}
@@ -116,9 +116,9 @@ const Services = () => {
             <ServicePacksCard
               title="C$"
               description="Estandar"
-              listItems={premiumPack}
+              listItems={standarPack}
               buttonText="Solicitar estandar"
-              onButtonClick={() => handleContact('premium')}
+              onButtonClick={() => handleContact('standar')}
             />
             <ServicePacksCard
               title="C$"
@@ -150,7 +150,7 @@ const Services = () => {
               description="Tarjetas de cumpleanos/eventos"
               listItems={Service2}
               buttonText="Solicitar"
-              onButtonClick={() => handleContact('premium')}
+              onButtonClick={() => handleContact('standar')}
             />
             <ServiceOthersCard
               title="C$"

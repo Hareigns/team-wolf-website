@@ -1,6 +1,7 @@
 import './App.css'
 import Home from '/src/pages/home'
-import Card from '/src/components/Card'
+import Navbar from '/src/components/Header'
+import Footer from '/src/components/Footer'
 import Services from '/src/pages/Services/services'
 
 
@@ -9,15 +10,15 @@ function App() {
   return (
     <div className='main-main'>
 
-      
-        <Home />
-      
+      <Navbar />
 
-      
-        <Services />
-      
+      <Home />
+
+      <Services />
 
 
+
+      <Footer />
 
     </div>
 

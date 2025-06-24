@@ -7,79 +7,61 @@ const Services = () => {
   {/* PACKS DE SERVICIOS */ }
 
   const fastPack = [
-    { text: '✔ Diseño rapido', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' }
+    { text: "1 diseno urgente (post/flayer)", icon: "bi bi-grid-fill text-primary" },
+    { text: "Entrega en 24 hrs", icon: "bi bi-instagram text-warning" }
   ];
 
   const basicPack = [
-    { text: '✔ Diseño básico', icon: 'bi bi-palette' },
-    { text: '✔ Soporte por email', icon: 'bi bi-envelope' },
-    { text: '✔ Soporte por email', icon: 'bi bi-envelope' }
+    { text: "1 post (redes sociales)", icon: "bi bi-grid-fill" },
+    { text: "1 Story (Instagram/Facebook)", icon: "bi bi-instagram" },
+    { text: "1 Flyer digital simple", icon: "bi bi-file-image" }
   ];
 
   const standarPack = [
-    { text: '✔ Diseños personalizados', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte 24/7', icon: 'bi bi-headset text-primary' },
-    { text: '✔ Dominio personalizado', icon: 'bi bi-globe' },
-    { text: '✔ SEO básico', icon: 'bi bi-search' }
+    { text: "3 posts (redes sociales)", icon: "bi bi-grid-fill text-primary" },
+    { text: "2 Stories (incluye 1 portada)", icon: "bi bi-instagram text-warning" },
+    { text: "1 Banner publicitario", icon: "bi bi-image-alt" }
   ];
 
   const completePack = [
-    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
-    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
-    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
-    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+    { text: "5 posts temáticos", icon: "bi bi-grid-fill text-primary" },
+    { text: "3 Stories (más plantilla editable)", icon: "bi bi-instagram text-warning" },
+    { text: "2 Flyers/Banners", icon: "bi bi-images" },
+    { text: "1 Mockup de producto", icon: "bi bi-box-seam" }
   ];
 
   {/* OTROS SERVICIOS */ }
 
   const Service1 = [
-    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
-    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
-    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
-    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+    { text: "Diseño profesional frontal y posterior", icon: "bi bi-card-text text-primary" },
+      { text: "Versión digital (PDF/PNG)", icon: "bi bi-file-earmark-arrow-down" },
+      { text: "Hasta 2 revisiones", icon: "bi bi-arrow-repeat text-warning" }
   ];
 
   const Service2 = [
-    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
-    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
-    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
-    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+    { text: "Diseño personalizado", icon: "bi bi-gift-fill text-danger" },
+      { text: "Versión para imprimir y compartir digital", icon: "bi bi-printer" }
   ];
 
   const Service3 = [
-    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
-    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
-    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
-    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+    { text: "Redes sociales", icon: "bi bi-facebook" },
+      { text: "Páginas web", icon: "bi bi-globe2" },
+      { text: "Impresión", icon: "bi bi-printer-fill" }
   ];
 
   const Service4 = [
-    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
-    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
-    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
-    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+    { text: "Diseño para eventos o promociones", icon: "bi bi-megaphone-fill text-info" },
+      { text: "Versiones digital e impresa", icon: "bi bi-file-earmark-arrow-down" }
   ];
 
   const Service5 = [
-    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
-    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
-    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
-    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+    { text: "4-6 páginas diseñadas", icon: "bi bi-collection text-success" },
+      { text: "Formato PDF listo para compartir", icon: "bi bi-filetype-pdf text-danger" }
   ];
 
   const Service6 = [
-    { text: '✔ Diseño standar', icon: 'bi bi-star-fill text-warning' },
-    { text: '✔ Soporte prioritario', icon: 'bi bi-headset text-primary' },
-    { text: '✔ Hosting incluido', icon: 'bi bi-globe' },
-    { text: '✔ SEO avanzado', icon: 'bi bi-search' },
-    { text: '✔ Analytics mensual', icon: 'bi bi-graph-up' }
+    { text: "Diseño para restaurantes/cafeterías", icon: "bi bi-cup-hot-fill" },
+      { text: "Versión digital e impresa", icon: "bi bi-file-earmark-arrow-down" }
   ];
 
   const handleContact = (plan) => {

@@ -1,9 +1,9 @@
 function About({
     title = "Acerca de nosotros",
-    description1 = "Team Wolf combina creatividad, tecnología y estrategia para desarrollar identidades visuales impactantes mediante gráficos, ayudando tanto a startups como a empresas consolidadas a modernizar su presencia digital.",
+    description1 = "Combinamos creatividad, tecnología y estrategia para desarrollar identidades visuales impactantes mediante gráficos, ayudando tanto a startups como a empresas consolidadas a modernizar su presencia digital.",
     description2 = "Ofrecemos soluciones personalizadas para todo tipo de negocios, desde emprendedores hasta grandes marcas, garantizando una identidad visual competitiva en el entorno digital.",
     description3 = "Nuestros diseños fusionan funcionalidad, emocionalidad y estética para fortalecer la conexión con tu audiencia y acelerar el crecimiento digital de tu proyecto.",
-    missionItems = ["En Team Wolf, transformamos sueños en diseños accesibles y auténticos. Nos comprometemos a ofrecer un servicio transparente y personalizado, tratando cada proyecto con la misma pasión del primer día."],
+    missionItems = ["Transformamos sueños en diseños accesibles y auténticos. Nos comprometemos a ofrecer un servicio transparente y personalizado, tratando cada proyecto con la misma pasión del primer día."],
     visionItems = ["Queremos ser el aliado creativo de marcas de todos los tamaños, demostrando que un buen diseño puede ser accesible. Nuestro éxito se mide en la satisfacción de nuestros clientes y en la historia que cada uno cuenta."],
 
 }) {

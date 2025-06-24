@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Footer = ({
     companyName = "Team Wolf",
-    slogan = "Diseño y desarrollo web de alto impacto",
+    slogan = "Diseño accesible, porque todos merecen brillar.",
     socialLinks = [
         {
             name: "Twitter",

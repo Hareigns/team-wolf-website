@@ -1,175 +1,175 @@
-import ServicePacksCard from '/src/components/Card';
-import ServiceOthersCard from '/src/components/Card';
+import React, { useEffect, useState } from 'react';
+import s_1 from '../../assets/images/s_1.webp';
+import s_2 from '../../assets/images/s_2.webp';
+import s_3 from '../../assets/images/s_3.webp';
+import s_4 from '../../assets/images/s_4.webp';
+import s_5 from '../../assets/images/s_5.webp';
+import s_6 from '../../assets/images/s_6.webp';
+import s_7 from '../../assets/images/s_7.webp';
 
 
 const Services = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-  {/* PACKS DE SERVICIOS */ }
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-  const fastPack = [
-    { text: "1 diseno urgente (post/flayer)", icon: "bi bi-grid-fill text-primary" },
-    { text: "Entrega en 24 hrs", icon: "bi bi-instagram text-warning" }
+    const element = document.getElementById('services');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
+  const services = [
+    {
+      title: "Diseño de Logos",
+      description: "Identidad visual única que representa la esencia de tu marca",
+      image: s_1,
+      price: "Desde C$",
+      comingSoon: true
+    },
+    {
+      title: "Banners Publicitarios",
+      description: "Designs impactantes para tus campañas de marketing digital",
+      image: s_2,
+      price: "Desde C$"
+    },
+    {
+      title: "Posters & Carteles",
+      description: "Diseños llamativos para eventos y promociones especiales",
+      image: s_3,
+      price: "Desde C$"
+    },
+    {
+      title: "Tarjetas de Presentación",
+      description: "Primeras impresiones profesionales que perduran",
+      image: s_4,
+      price: "Desde C$"
+    },
+    {
+      title: "Diseño de Redes Sociales",
+      description: "Contenido visual optimizado para todas las plataformas",
+      image: s_5,
+      price: "Desde C$"
+    },
+    {
+      title: "Flyers & Volantes",
+      description: "Materiales promocionales que capturan la atención",
+      image: s_6,
+      price: "Desde C$"
+    },
+    {
+      title: "Diseño de Packaging",
+      description: "Empaques que protegen y venden tu producto",
+      image: s_7,
+      price: "Desde C$",
+      comingSoon: true
+    }
   ];
 
-  const basicPack = [
-    { text: "1 post (redes sociales)", icon: "bi bi-grid-fill" },
-    { text: "1 Story (Instagram/Facebook)", icon: "bi bi-instagram" },
-    { text: "1 Flyer digital simple", icon: "bi bi-file-image" }
-  ];
-
-  const standarPack = [
-    { text: "3 posts (redes sociales)", icon: "bi bi-grid-fill text-primary" },
-    { text: "2 Stories (incluye 1 portada)", icon: "bi bi-instagram text-warning" },
-    { text: "1 Banner publicitario", icon: "bi bi-image-alt" }
-  ];
-
-  const completePack = [
-    { text: "5 posts temáticos", icon: "bi bi-grid-fill text-primary" },
-    { text: "3 Stories (más plantilla editable)", icon: "bi bi-instagram text-warning" },
-    { text: "2 Flyers/Banners", icon: "bi bi-images" },
-    { text: "1 Mockup de producto", icon: "bi bi-box-seam" }
-  ];
-
-  {/* OTROS SERVICIOS */ }
-
-  const Service1 = [
-    { text: "Diseño profesional frontal y posterior", icon: "bi bi-card-text text-primary" },
-      { text: "Versión digital (PDF/PNG)", icon: "bi bi-file-earmark-arrow-down" },
-      { text: "Hasta 2 revisiones", icon: "bi bi-arrow-repeat text-warning" }
-  ];
-
-  const Service2 = [
-    { text: "Diseño personalizado", icon: "bi bi-gift-fill text-danger" },
-      { text: "Versión para imprimir y compartir digital", icon: "bi bi-printer" }
-  ];
-
-  const Service3 = [
-    { text: "Redes sociales", icon: "bi bi-facebook" },
-      { text: "Páginas web", icon: "bi bi-globe2" },
-      { text: "Impresión", icon: "bi bi-printer-fill" }
-  ];
-
-  const Service4 = [
-    { text: "Diseño para eventos o promociones", icon: "bi bi-megaphone-fill text-info" },
-      { text: "Versiones digital e impresa", icon: "bi bi-file-earmark-arrow-down" }
-  ];
-
-  const Service5 = [
-    { text: "4-6 páginas diseñadas", icon: "bi bi-collection text-success" },
-      { text: "Formato PDF listo para compartir", icon: "bi bi-filetype-pdf text-danger" }
-  ];
-
-  const Service6 = [
-    { text: "Diseño para restaurantes/cafeterías", icon: "bi bi-cup-hot-fill" },
-      { text: "Versión digital e impresa", icon: "bi bi-file-earmark-arrow-down" }
-  ];
-
-  const handleContact = (plan) => {
-    console.log(`Contactar sobre: ${plan}`);
-    // Aquí puedes agregar tu lógica para el click del botón
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
+    <section id="services" className="py-5 bg-dark text-white">
+      <div className="container px-4">
+        <div style={{
+          transition: 'all 1s ease',
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
+        }}>
+          {/* Header */}
+          <div className="text-center mb-5">
+            <h2 className="display-4 fw-bold mb-4 text-white">
+              Nuestros servicios
+            </h2>
+            <p className="lead text-white-50 mx-auto" style={{ maxWidth: '700px' }}>
+              Servicios de diseño digital especializados para hacer crecer tu negocio
+            </p>
+          </div>
 
-    <div className='services-main-container'>
+          {/* Services Grid */}
+          <div className="row g-4">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`col-md-6 col-lg-4 col-xl-3 ${index === 6 ? 'col-xl-6 col-lg-6' : ''}`}
+                style={{
+                  transition: `all 0.6s ease ${index * 100}ms`,
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible ? 'translateY(0)' : 'translateY(30px)'
+                }}
+              >
+                <div className="card h-100 bg-secondary bg-opacity-25 border border-secondary border-opacity-50 hover-shadow">
+                  <div className="position-relative overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="card-img-top w-100 object-fit-cover"
+                      style={{ height: '200px', filter: 'grayscale(100%) brightness(0.7)' }}
+                    />
+                    <div className="position-absolute top-0 start-0 w-100 h-100 bg-gradient-to-bottom from-black opacity-50"></div>
+                    <div className="position-absolute top-0 end-0 m-3">
+                      <span className="badge bg-dark text-white px-3 py-2">
+                        {service.price}
+                      </span>
+                    </div>
+                  </div>
 
-      <div className='servicePacks-main-container'>
-        <div className="container py-5">
-          <h1 className="text-center mb-4">Nuestros servicios</h1>
-          <h2 className="text-center text-muted text-center mb-4">Paquetes disponibles</h2>
-          <div className="d-flex flex-wrap justify-content-center gap-4">
+                  <div className="card-body d-flex flex-column">
+                    <h3 className="card-title h5 fw-bold text-white mb-3">{service.title}</h3>
+                    <p className="card-text text-white-50 mb-4">{service.description}</p>
+                    <button
+                      className={`btn mt-auto align-self-stretch ${service.comingSoon
+                        ? 'btn-secondary text-dark fw-bold'
+                        : 'btn-dark'
+                        }`}
+                      onClick={service.comingSoon ? undefined : scrollToContact}
+                      disabled={service.comingSoon}
+                    >
+                      {service.comingSoon ? 'Próximamente' : 'Solicitar cotización'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-            <ServicePacksCard
-              title="C$"
-              description="Rapido"
-              listItems={fastPack}
-              buttonText="Solicitar completo"
-              buttonVariant="primary"
-              onButtonClick={() => handleContact('completo')}
-            />
-            <ServicePacksCard
-              title="C$"
-              description="Basico"
-              listItems={basicPack}
-              buttonText="Solicitar básico"
-              buttonVariant="primary"
-              onButtonClick={() => handleContact('básico')}
-            />
-            <ServicePacksCard
-              title="C$"
-              description="Estandar"
-              listItems={standarPack}
-              buttonText="Solicitar estandar"
-              onButtonClick={() => handleContact('standar')}
-            />
-            <ServicePacksCard
-              title="C$"
-              description="Completo"
-              listItems={completePack}
-              buttonText="Solicitar completo"
-              buttonVariant="primary"
-              onButtonClick={() => handleContact('completo')}
-            />
-
+          {/* Call to Action */}
+          <div className="text-center mt-5">
+            <div className="bg-secondary bg-opacity-25 rounded-3 p-5 border border-secondary">
+              <h3 className="h2 fw-bold text-white mb-4">¿Necesitas algo personalizado?</h3>
+              <p className="text-white-50 mb-4">
+                Creamos soluciones de diseño únicas adaptadas a tus necesidades específicas
+              </p>
+              <button
+                onClick={scrollToContact}
+                className="btn btn-light px-5 py-3 fw-bold"
+              >
+                Contactar ahora
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className='serviceOthers-main-container'>
-        <div className="container py-5">
-          <h2 className="text-muted text-center mb-4">Otros servicios</h2>
-          <div className="d-flex flex-wrap justify-content-center gap-4">
-            <ServiceOthersCard
-              title="C$"
-              description="Tarjetas de presentacion"
-              listItems={Service1}
-              buttonText="Solicitar"
-              buttonVariant="primary"
-              onButtonClick={() => handleContact('básico')}
-            />
-            <ServiceOthersCard
-              title="C$"
-              description="Tarjetas de cumpleanos/eventos"
-              listItems={Service2}
-              buttonText="Solicitar"
-              onButtonClick={() => handleContact('standar')}
-            />
-            <ServiceOthersCard
-              title="C$"
-              description="Banners publicitarios"
-              listItems={Service3}
-              buttonText="Solicitar"
-              buttonVariant="primary"
-              onButtonClick={() => handleContact('completo')}
-            />
-            <ServiceOthersCard
-              title="C$"
-              description="Posters"
-              listItems={Service4}
-              buttonText="Solicitar"
-              buttonVariant="primary"
-              onButtonClick={() => handleContact('completo')}
-            />
-            <ServiceOthersCard
-              title="C$"
-              description="Catalogos digitales"
-              listItems={Service5}
-              buttonText="Solicitar"
-              buttonVariant="primary"
-              onButtonClick={() => handleContact('completo')}
-            />
-            <ServiceOthersCard
-              title="C$"
-              description="Disenos de menus"
-              listItems={Service1}
-              buttonText="Solicitar"
-              buttonVariant="primary"
-              onButtonClick={() => handleContact('completo')}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 
